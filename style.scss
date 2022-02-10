@@ -14,7 +14,7 @@ $Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
 
 body {
   font-family: "Inter", sans-serif;
-//   font-family: "Lexend Deca", sans-serif;
+  //   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
   display: grid;
   place-items: center;
@@ -30,77 +30,63 @@ body {
   overflow: hidden;
   max-width: 330px;
 
-  &__image-container {
-    position: relative;
-
-  }
-
-  &__image-background-color {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $Soft-violet-accent;
-    opacity: .5;
-  }
-
   &__image {
-    background-image: url("./images/image-header-desktop.jpg");
+    background-image: url("./images/image-header-desktop.jpg"),
+      linear-gradient(hsl(277, 37%, 40%), hsl(277, 37%, 40%));
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     min-height: 225px;
   }
 
-  &__info{
-      padding: .8rem 1.8rem;
-      text-align: center;
-      margin-bottom: 1.6rem;
+  &__info {
+    padding: 0.8rem 1.8rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
   }
 
-  &__title{
-      font-size: 1.7rem;
-      color: white;
+  &__title {
+    font-size: 1.7rem;
+    color: white;
 
-      & > span {
-          color: $Soft-violet-accent;
-      }
+    & > span {
+      color: $Soft-violet-accent;
+    }
   }
 
-  &__descri{
-      line-height: 1.5rem;
-      color: $Slightly-transparent-white-paragraph;
-      margin-bottom: 2rem;
+  &__descri {
+    line-height: 1.5rem;
+    color: $Slightly-transparent-white-paragraph;
+    margin-bottom: 2rem;
   }
 
-  &__stats-list{
-      display: flex;
-      flex-direction: column;
-      gap: 1.8rem;
+  &__stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
 
-      @media(max-width: 375px){
-        flex-direction: row;
-      }
+    @media (max-width: 375px) {
+      flex-direction: row;
+    }
   }
 
-  &__stat{
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  &__stat-cant{
-      font-size: 1.4rem;
-      color: $White-heading-stats;
-      font-weight: 700;
+  &__stat-cant {
+    font-size: 1.4rem;
+    color: $White-heading-stats;
+    font-weight: 700;
   }
 
-  &__stat-title{
-      text-transform: uppercase;
-      font-size: .7rem;
-      color: $Slightly-transparent-white-stat-headings;
-        letter-spacing: 2px;
-      
+  &__stat-title {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: $Slightly-transparent-white-stat-headings;
+    letter-spacing: 2px;
   }
 }
