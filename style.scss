@@ -29,6 +29,16 @@ body {
   width: 90%;
   overflow: hidden;
   max-width: 330px;
+  
+  @media(min-width: 768px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "info image";
+    max-width: 80%;
+    height: 330px;
+    flex-direction: row;
+  }
 
   &__image {
     background-image: url("./images/image-header-desktop.jpg"),
@@ -38,12 +48,22 @@ body {
     background-size: cover;
     width: 100%;
     min-height: 225px;
+
+    @media(min-width: 768px){
+      grid-area: image;
+      background-size:  100% 100%;
+    }
   }
 
   &__info {
     padding: 0.8rem 1.8rem;
     text-align: center;
     margin-bottom: 1.6rem;
+
+    @media(min-width: 768px){
+      text-align: left;
+      padding: 1rem 5rem 2rem 3rem;
+    }
   }
 
   &__title {
@@ -58,7 +78,7 @@ body {
   &__descri {
     line-height: 1.5rem;
     color: $Slightly-transparent-white-paragraph;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   &__stats-list {
@@ -66,8 +86,9 @@ body {
     flex-direction: column;
     gap: 1.8rem;
 
-    @media (max-width: 375px) {
+    @media (min-width: 768px) {
       flex-direction: row;
+      gap: 4rem;
     }
   }
 
