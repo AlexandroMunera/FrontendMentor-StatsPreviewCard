@@ -28,15 +28,15 @@ body {
   color: $Slightly-transparent-white-paragraph;
   width: 90%;
   overflow: hidden;
-  max-width: 330px;
+  max-width: 25rem;
   
   @media(min-width: 768px){
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "info image";
-    max-width: 80%;
-    height: 330px;
+    max-width: 65rem;
+    height:25rem;
     flex-direction: row;
   }
 
@@ -47,7 +47,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 225px;
+    min-height:15rem;
 
     @media(min-width: 768px){
       grid-area: image;
@@ -78,13 +78,15 @@ body {
   &__descri {
     line-height: 1.5rem;
     color: $Slightly-transparent-white-paragraph;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.5rem;
   }
 
   &__stats-list {
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    margin: 0;
+    padding: 0;
 
     @media (min-width: 768px) {
       flex-direction: row;
